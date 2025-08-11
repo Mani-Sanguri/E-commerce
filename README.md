@@ -1,1 +1,125 @@
 # E-commerce
+
+Project Background
+As a data analyst at Global Superstore, I work in the retail and e-commerce industry, where the company has been actively operating for over a decade, serving customers across multiple regions worldwide. The business follows an omnichannel retail model, combining both physical and online sales channels to deliver a wide range of products, including office supplies, furniture, and technology. From my role’s perspective, the company’s success is measured through key business metrics such as:
+1. Total Sales Revenue and Profits – primary drivers for evaluating overall business health.
+2. Customer Acquisition & Retention Rates – tracking both growth and loyalty across our customer base.
+3. Regional Sales Performance – identifying high-performing and underperforming markets.
+4. Order Fulfilment Time – a major factor in customer satisfaction and repeat sales.
+
+My day-to-day work involves using data from our ERP and CRM systems to track these KPIs, spot performance trends, and flag areas where strategic interventions can improve revenue, reduce costs, and enhance the customer experience. By combining historical data with predictive analytics, we help leadership make informed decisions that align with our long-term growth strategy.
+
+Insights and recommendations are provided on the following key areas:
+Category 1: Customer Segments
+Category 2: Product Types
+Category 3: Country
+
+Data Structure & Initial Checks
+The companies main database structure as seen below consists of 1 table with a total row count of 51290 and column record of 24. A description of each column in table is as follows:
+Order ID, Order Date, Ship Date, Ship Mode, Customer ID, Customer Name, Segment, City, State, Country, Postal Code, Market, Region, Product ID, Category, Sub-Category, Product Name, Sales,
+Quantity, Discount, Profit, Shipping Cost, Order Priority       
+
+Sales Trends Across Time: 
+Insights:
+1. Sales Over Time:
+    a. Continuous year-over-year increase in sales from 2011 to 2014.
+    b. Sales grew from ~2.25 million in 2011 to ~4.3 million in 2014.
+    c. This indicates strong and consistent top-line performance.
+2. Sales Growth % Over Time:
+    a. Growth rate spiked in 2013 (~26.7%) but dipped slightly in 2014 (~26%).
+    b. Although sales volume kept rising, the rate of growth slightly slowed down in 2014.
+    c. May suggest early signs of market saturation or growth stabilization.
+3. Profit Over Time:
+    a. Profit shows a steady upward trajectory from ~250K to over 500K.
+    b. Indicates strong bottom-line performance aligning with sales growth.
+4. Profit Growth % Over Time:
+    a. Significant peak in 2013 (~32.2%), followed by a noticeable dip in 2014 (~23.8%).
+    b. Profit is still increasing, but profitability growth is slowing.
+    c. This could be due to rising operational costs, discounting, or lower margins.
+Conclusions:
+1. Strong Revenue Growth: Sales doubled in just 3 years, reflecting business expansion or increased demand.
+2. Slight Decline in Growth Rates: Both sales and profit growth percentages are tapering off by 2014.
+3. Efficiency Pressure: Slower profit growth relative to sales might indicate inefficiencies or cost increases.
+
+Customer Segments 
+Ques: Which customer segment is the most profitable across years?
+1. At-Risk customers are most profitable segment: Profit has grown steadily year-over-year from ~190K in 2011 to ~370K in 2014. Losing these customers would have the largest financial impact.
+2. Loyal customers show consistent growth: Profit nearly tripled from ~30K to ~85K over four years, indicating healthy retention and possibly higher purchase frequency.
+3. High-Value customers are stable but not expanding fast: Profit increased modestly from ~27K to ~42K, suggesting potential to drive frequency or average basket size.
+4. Dormant customers remain marginal: Minimal profit contribution (~10K–20K per year) with no significant upward trend, making them lower priority for investment compared to At-Risk and Loyal.
+At-Risk customers have both high revenue and high profit, meaning retention campaigns here could yield the highest ROI.
+
+Ques: How are the customer distributed across countries?
+1. Central region dominates: It has the highest count (over 11K), far exceeding other regions. This suggests it’s a major customer or transaction hub.
+2. South is the second largest contributor: Around 6.7K, meaning strong representation but still significantly behind Central.
+3. Africa, EMEA, and North are mid-tier: All hover around 4.5K–5K, indicating steady but not dominant volumes.
+4. Canada is almost negligible: Very low count (<500), suggesting either limited market penetration or low activity there.
+Potential growth regions: Caribbean, Central Asia, and North Asia have relatively low counts (2K or less for Caribbean and Central Asia, ~2.3K for North Asia), indicating opportunities for expansion.
+
+Identify High/Low Performing Regions, Categories & Segments
+1. Sales by Region:
+    a. Central is the top-performing region with over 2.7 million in sales.
+    b. Regions like Canada, Caribbean, Central Asia, and West show significantly lower sales, indicating potential underperformance or untapped market opportunities.
+    c. South and North also show strong performance, crossing the 1 million mark.
+  Recommendation:
+  a. Invest in region-specific marketing campaigns for underperforming areas.
+  b. Consider partnerships or distribution channels in low-penetration regions.
+  c. For top-performing regions, focus on customer loyalty programs to sustain growth.
+2. Sales by Category:
+    a. Technology leads with sales exceeding 4.5 million, followed by Furniture and Office Supplies.
+    b. While all three categories perform well, Office Supplies lags slightly behind the others, suggesting room for growth or reevaluation of strategy.
+  Recommendation:
+    a. Explore bundling Office Supplies with high-demand categories like Technology for cross-selling.
+    b. Introduce category-specific promotions or discounts to increase Office Supplies adoption.
+3. Sales by Segment:
+    a. Consumer segment dominates with over 6 million in sales, nearly double that of Corporate and Home Office.
+    b. Home Office is the weakest segment, under 2.5 million, signaling a potential area for marketing or product improvement.
+   Recommendation:
+    a. For Home Office, launch targeted ads emphasizing productivity, convenience, and small-business benefits.
+    b. For Corporate, explore B2B partnerships and bulk order incentives.
+
+Track Shipping Performance and Delivery Delays
+Key Insights:
+  1. Same Day Shipping is highly efficient, with near-zero delivery hours and minimal variability—ideal for urgent orders.
+  2. First Class offers a good balance: faster than most, with moderate and consistent delivery durations.
+  3. Second Class shows wide variability, indicating inconsistent performance. Median delivery hours are around 70–80 hours.
+  4. Standard Class is the slowest and most variable, with delivery durations extending up to 170+ hours.
+Business Implications:
+  1. Customers choosing Standard Class face significantly longer and less predictable wait times.
+  2. Second Class may result in customer dissatisfaction due to unpredictability despite being faster than Standard.
+  3. Same Day and First Class deliver strong performance and can be promoted for premium service tiers.
+Recommended Actions:
+  1. Audit processes for Standard and Second Class to reduce delivery time and variance.
+  2. Incentivize First Class upgrades for better customer experience at slightly higher cost.
+  3. Consider repositioning warehouses or optimizing carrier routes to enhance delivery speed in lower-tier shipping methods.
+
+Ques: Do some regions consistently experience delays?
+Key Insights: 
+  1. Most markets (US, APAC, EU, Africa, EMEA, LATAM, Canada) have a median delivery time around 95–100 hours, showing no major regional differences in the central trend.
+  2. The interquartile range (middle 50% of deliveries) is similar for all markets, suggesting comparable operational performance globally.
+  3. All markets show extreme delivery times on both the low and high ends, indicating occasional unusually fast or slow deliveries.
+  4. Canada has a larger spread on the lower side, meaning it achieves some much faster deliveries than other regions but is also inconsistent.
+  5. The maximum delivery times (~170 hours) are consistent across markets, hinting that these delays may be caused by global supply chain or process issues rather than market-specific challenges.
+Recommendations:
+1. Reduce High-End Delays: Investigate the root causes of extreme slow deliveries (~170 hours) that occur across all markets. These could be due to supply chain bottlenecks, customs clearance, or internal processing delays.
+2. Standardize Best Practices: Identify what enables Canada to achieve faster deliveries in some cases and replicate those practices across other markets.
+3. Leverage Predictive Analytics: Use historical delivery time data to predict and flag potential delays early, allowing for proactive customer communication and intervention.
+4. Targeted Process Optimization: Since median times are similar across markets, focus on streamlining logistics, inventory allocation, and route optimization globally rather than market-specific overhauls.
+5. Customer Expectation Management: Implement realistic delivery time promises in underperforming cases to maintain trust and improve satisfaction scores.
+
+Ques: Do specific segments (e.g., Corporate, Consumer) have longer delivery times across countries?
+Key Insights:
+  1. Overall Segment Patterns Still Hold: Across all three segments, median delivery times remain tightly grouped (~95–100 hrs).
+  2. Delivery time variability is also consistent, indicating no segment-specific operational inefficiencies at a high level.
+  Market-Level Variation (Within Segments)
+    1. Well-Performing Markets:
+    Africa (Corporate) and Canada (Corporate) show lower medians (~50–60 hrs) compared to other markets, indicating faster deliveries in those regions for that segment.
+    2. Suggests either better logistics or smaller geographic delivery zones.
+  Underperforming or Slower Markets:
+    1. In all segments, LATAM, EMEA, and US tend to have longer or more variable delivery times.
+    2. Canada (Home Office) shows a high upper whisker, indicating potential delays or outliers in some deliveries.
+Conclusions & Recommendations
+  1. No Major Segment-Wide Priority Issues: Delivery performance is fairly uniform across segments.
+  2. Market-Specific Optimization Needed:
+      a. Corporate-Africa and Corporate-Canada may offer best practices that can be replicated elsewhere.
+      b. LATAM and US could benefit from a review of last-mile logistics, fulfillment center reach, or vendor SLAs.
