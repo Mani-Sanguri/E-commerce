@@ -1,2 +1,4 @@
-# Global-Superstore Dataset: https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset
+# Global-Superstore 
+
+Dataset: https://www.kaggle.com/datasets/apoorvaappz/global-super-store-dataset
 
